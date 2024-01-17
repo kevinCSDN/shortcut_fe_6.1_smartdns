@@ -35,7 +35,8 @@ pushd package/small
 
 #passwall2
 git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git
-git clone -b luci-smartdns-dev --depth 1 https://github.com/xiaorouji/openwrt-passwall.git
+#git clone -b luci-smartdns-dev --depth 1 https://github.com/xiaorouji/openwrt-passwall.git
+it clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall.git
 #mosdns
 git clone -b v5 --depth 1 https://github.com/sbwml/luci-app-mosdns.git
 git clone --depth=1 https://github.com/fw876/helloworld.git
