@@ -39,6 +39,6 @@ git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git
 git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall.git
 #mosdns
 #git clone -b v5 --depth 1 https://github.com/sbwml/luci-app-mosdns.git
-git clone --depth=1 https://github.com/fw876/helloworld.git
+#git clone --depth=1 https://github.com/fw876/helloworld.git
 
 popd
