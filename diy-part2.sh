@@ -21,9 +21,9 @@ sed -i '$ a uci set uhttpd.main.redirect_https='\''0'\''' package/lean/default-s
 sed -i '$ a uci commit uhttpd' package/lean/default-settings/files/zzz-default-settings
 
 # feed重建
-./script/feeds clean
-./script/feeds update -a
-./script/feeds install -a
+./scripts/feeds clean
+./scripts/feeds update -a
+./scripts/feeds install -a
 
 #替换为新版本golang
 rm -rf feeds/packages/lang/golang
