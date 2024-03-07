@@ -20,7 +20,9 @@ sed -i 's/PATCHVER:=6.1/PATCHVER:=5.15/g' target/linux/x86/Makefile   # x86机�
 sed -i '$ a uci set uhttpd.main.redirect_https='\''0'\''' package/lean/default-settings/files/zzz-default-settings
 sed -i '$ a uci commit uhttpd' package/lean/default-settings/files/zzz-default-settings
 
-
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+./scripts/feeds install -a
 # rm -rf feeds/packages/utils/runc/Makefile   # 临时删除run1.0.3
 # svn export https://github.com/openwrt/packages/trunk/utils/runc/Makefile feeds/packages/utils/runc/Makefile   # 添加runc1.0.2
 
