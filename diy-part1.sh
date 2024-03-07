@@ -13,10 +13,6 @@
 # Uncomment a feed source
 sed -i '1i src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 
-# 删除feed，重建
-script/feeds clean
-script/feeds update -a
-script/feeds install -a
 
 #克隆passwall环境插件
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/pwpage
