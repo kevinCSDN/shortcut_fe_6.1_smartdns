@@ -11,18 +11,12 @@
 #
 
 # Uncomment a feed source
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-#删除feeds自带mosdns、v2ray-geodata
-rm -rf ./feeds/packages/net/mosdns
-rm -rf feeds/packages/net/v2ray-geodata
-rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/themes/luci-theme-bootstrap
+sed -i '1i src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 
-
-
-
-
-
+# 删除feed，重建
+script/feeds clean
+script/feeds update -a
+script/feeds install -a
 
 #克隆passwall环境插件
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/pwpage
