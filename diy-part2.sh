@@ -20,6 +20,12 @@ sed -i 's/PATCHVER:=6.1/PATCHVER:=5.15/g' target/linux/x86/Makefile   # x86机�
 sed -i '$ a uci set uhttpd.main.redirect_https='\''0'\''' package/lean/default-settings/files/zzz-default-settings
 sed -i '$ a uci commit uhttpd' package/lean/default-settings/files/zzz-default-settings
 
+# feed重建
+script/feeds clean
+script/feeds update -a
+script/feeds install -a
+
+#替换为新版本golang
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 ./scripts/feeds install -a
