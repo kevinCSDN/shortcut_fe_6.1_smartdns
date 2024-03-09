@@ -16,7 +16,7 @@ sed -i '1i src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf
 rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 
 #克隆passwall环境插件
-git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
+git clone https://github.com/xiaorouji/openwrt-passwall-packages package/helloworld
 git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
 #克隆的源码放在small文件夹,预先建立small文件夹
 mkdir package/small
